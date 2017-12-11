@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Test : MonoBehaviour {
 
-    int[] array = {21,33,56,100 };
+    int[] array = {21,33,56,100,200 };
 
     void Start ()
     {
@@ -18,9 +18,10 @@ public class Test : MonoBehaviour {
         Boss boss = new Boss();
         for(int i = 0; i < 10; i++)
         {
-            boss.Magic();
+            boss.Magic(5);
 
         }
+        boss.Magic(5);
     }
 	
 	// Update is called once per frame
@@ -31,11 +32,11 @@ public class Test : MonoBehaviour {
     {
         int mp = 53;
 
-        public void Magic() 
+        public void Magic(int n) 
         {
-            if (mp > 5)
+            if (mp > n)
             {
-                mp -= 5;
+                mp -= n;
 
                 Debug.Log("魔法攻撃をした。残りⅯＰは" + mp);
             }
