@@ -34,7 +34,7 @@ public class Test : MonoBehaviour {
 
         public void Magic(int n) 
         {
-            if (mp > n)
+            if (mp >= n)
             {
                 mp -= n;
 
